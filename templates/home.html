@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Iceberg Home{% endblock %}
+{% block stylelink %}<link rel="stylesheet" href="/static/css/style.css" type="text/css">{% endblock %}
+
+{% block content %}
+<div class="anchor-font">
+    <div class="home-main centered">
+        <div class="text-align-div">
+            <h1 class="title-font-size"><u>Iceberg Private Forum V1.0</u></h1>
+        </div>
+        <div class="verifying-form">
+            <form>
+                <p>Enter your name:</p>
+                <input type="text" name="name" class="verifying-input-field">
+                <p>Enter password:</p>
+                <input type="password" name="passcode" class="verifying-input-field">
+                <br>
+                <div class="aligned">
+                    <input type="submit" value="Submit" class="submit-button">
+                    <a href="/register"><div class="register-button">Register</div></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

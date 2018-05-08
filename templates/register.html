@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+{% block stylelink %}<link rel="stylesheet" href="/static/css/style.css" type="text/css">{% endblock %}
+
+{% block content %}
+<div class="anchor-font">
+    <div class="register-main centered">
+        <div class="text-align-div">
+            <h1 class="title-font-size"><u>Register</u></h1>
+            <div class="verifying-form">
+                <form>
+                    <p>Enter your CodeName:</p>
+                    <input type="text" name="name" class="verifying-input-field">
+                    <p>Enter your password:</p>
+                    <input type="password" name="password" class="verifying-input-field">
+                    <p>Enter the PassCode:</p>
+                    <input type="text" name="passcode" class="verifying-input-field">
+                    <br>
+                    <p>What role are you? (Be honest!)</p>
+                    <input type="radio" name="role" value="Kid" id="role1">
+                    <label for="role1">Kid</label>
+                    <input type="radio" name="role" value="Mom" id="role2">
+                    <label for="role2">Mom</label>
+                    <input type="radio" name="role" value="Dad" id="role3">
+                    <label for="role3">Dad</label>
+                    <br>
+                    <input type="submit" value="Submit" class="submit-button">
+                    <br>
+                    <a href="/">Home</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

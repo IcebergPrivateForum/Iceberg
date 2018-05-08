@@ -1,0 +1,136 @@
+body {
+    background-color: cornflowerblue;
+}
+
+textarea {
+    resize: none;
+    border: 1.5px solid navy;
+    border-radius: 5px;
+    text-align: center;
+    transition: 1s;
+}
+
+.home-main {
+    width: 600px;
+    height: 400px;
+    background-color: cyan;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.forum-main {
+    width: 700px;
+    height: 1500px;
+    background-color: cyan;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.register-main {
+    width: 600px;
+    height: 550px;
+    background-color: cyan;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.text-align-div {
+    text-align: center;
+}
+
+.anchor-font {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.title-font-size {
+    font-size: 40px;
+}
+
+.centered {
+    padding: auto;
+    margin: auto;
+}
+
+.aligned {
+    text-align: center;
+}
+
+.verifying-form {
+    margin: 5px;
+}
+
+.verifying-input-field {
+    border: 1.5px solid navy;
+    border-radius: 5px;
+    text-align: center;
+    height: 20px;
+    transition: 1s;
+}
+
+.compacted-textarea {
+    border: 1.5px solid navy;
+    border-radius: 5px;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    transition: 1s;
+}
+
+.verifying-input-field:hover, textarea:hover, .sumbit-button:hover {
+    border-color: dodgerblue;
+}
+
+.submit-button {
+    border: 1.5px solid navy;
+    border-radius: 5px;
+    text-align: center;
+    height: 40px;
+    width: 70px;
+    transition: 1s;
+}
+
+.kid-post {
+    background-color: lawngreen;
+    border: 2px solid black;
+    height: 100px;
+    width: 500px;
+    word-break: break-all;
+}
+
+.kid-header {
+    color: darkgreen;
+}
+
+.mom-post {
+    background-color: red;
+    border: 2px solid black;
+    height: 100px;
+    width: 500px;
+    word-break: break-all;
+}
+
+.mom-header {
+    color: darkred;
+}
+
+.dad-post {
+    background-color: blue;
+    border: 2px solid black;
+    height: 100px;
+    width: 500px;
+    word-break: break-all;
+}
+
+.dad-header {
+    color: darkblue;
+}
+
+.register-button {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 30px;
+    width: 190px;
+    background-color: darkgrey;
+}

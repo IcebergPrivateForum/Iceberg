@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}Iceberg Forum{% endblock %}
+{% block stylelink %}<link rel="stylesheet" href="/static/css/style.css" type="text/css">{% endblock %}
+
+{% block content %}
+<div class="anchor-font">
+    <div class="forum-main centered">
+        <div class="text-align-div">
+            <h1 class="title-font-size"><u>Hello, {{ current_user.name }}!</u></h1>
+            <table>
+                <td>
+                    <p>Enter Message</p>
+                    <form>
+                        <textarea name="message" rows=5 cols=50 placeholder="Enter Message Here." class="centered"></textarea>
+                        <input type="submit" value="Post" class="submit-button">
+                    </form>
+                    {% if message_too_long %}
+                        <p>Message too long!</p>
+                    {% endif %}
+                </td>
+                <td>
+                    <p>Rules (Please read before posting)</p>
+                    <ul>
+                        <textarea class="compacted-textarea">
+                        Do NOT reference other's real names. Doing so is risking the internet security of another person.
+                        No swearing or bad language
+                        No criticizing other people on this forum
+                        No spamming (Unless it's April 1st)
+                        Keep the video game/BFDI refrences to a minimum
+                        Keep the CAPS to a minimum
+                        Keep the peace!
+                        Everything you say must be relevant to the current conversation.
+                        KIDS: There are MOMS and DADS here. They have authority over you.
+                        MOMS and DADS: You have authority over the KIDS.
+                        Have fun! (No, the website won't shut down if you're not.)</textarea>
+                    </ul>
+                    <h6>Failure to follow rules is punishable by removal of account, dropping of conversation, or whatever else neccessary.</h6>
+                </td>
+            </table>
+            {% for message in messages %}
+                {% if message.poster_role == "Kid" %}
+                    <div class="centered kid-post"><div class="kid-header">KID {{ message.posted_by }}</div>{{ message.message }}</div>
+                {% elif message.poster_role == "Mom" %}
+                    <div class="centered mom-post"><div class="mom-header">MOM {{ message.posted_by }}</div>{{ message.message }}</div>
+                {% else %}
+                    <div class="centered dad-post"><div class="dad-header">DAD {{ message.posted_by }}</div>{{ message.message }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
