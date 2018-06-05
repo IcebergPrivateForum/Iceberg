@@ -57,4 +57,5 @@ def register():
             return redirect(url_for('forum'))
     return render_template("register.html")
 
-app.run(debug=True, port=5173)
+if __name__ == "__main__":
+    app.run(debug=False, port=5173)
